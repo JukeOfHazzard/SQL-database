@@ -28,8 +28,9 @@ insert, modify, delete, and retrieve (or query) data
 # Useful Websites
 
 {Make a list of websites that you found helpful in this project}
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
+* [sqlite tutorial](https://www.youtube.com/watch?v=xbBFHiTFLRc))
+* [CSV to sqlite](https://mungingdata.com/sqlite/create-database-load-csv-python/)
+* [pandas to sqlite](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_sql.html)
 
 # Future Work
 

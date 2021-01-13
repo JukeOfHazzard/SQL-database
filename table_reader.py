@@ -64,3 +64,11 @@ class table_reader:
 
     """ USER INTERFACE METHODS """
     # TODO: define user interaction methods which call above helper methods
+
+
+# example of main module
+# data is in excel file, exported to two .csv files
+spells1 = table_reader("spells1.db", "spells")
+# in table_reader object, import .csv data into .db file under table name spells
+spells2 = table_reader("spells2.db", "spells")
+# in table_reader object, import .csv data into .db file under table name spells

@@ -2,6 +2,32 @@ import sqlite3
 import SQL_basics as sql
 import pandas as pd
 
+from pathlib import Path
+
+Path('spells.db').touch()
+
+conn = sqlite3.connect('spells.db')
+c = conn.cursor()
+c.execute('''CREATE TABLE spells (id_index int PRIMARY KEY,
+name text,
+level int,
+type text,
+ritual bool,
+casting_time text,
+components text
+duration text,
+bard_access bool,
+barbarian_access bool,
+cleric_access bool,
+druid_access bool,
+figher_rogue_access bool,
+monk_access bool,
+paladin_access bool,
+ranger_access bool,
+sorcerer_access bool,
+warlock_access bool,
+wizard_access bool)''')
+
 # load the data into a Pandas DataFrame
 spell1 = pd.read_csv('Spells_Player.csv')
 # write the data to a sqlite table
@@ -17,6 +43,7 @@ spell2.to_sql('spellsX', conn, if_exists='replace', index = False)
 connection = sqlite3.connect('spells.db')
 cursor = connection.cursor()
 
+'''put in the table_reader file'''
 while True:
     print("1) Display ")
     print("2) Add ")

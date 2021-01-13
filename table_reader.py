@@ -20,6 +20,10 @@ class table_reader:
         
 
     """ HELPER METHODS """
+    def load_csv(self):
+        # TODO: transfer from main.py after Eli has edited this
+        pass
+
     def table_init(self):
         """  """
         table_headers = "name" # TODO: construct table_header in ui methods below

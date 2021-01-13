@@ -1,0 +1,54 @@
+"""
+Table Reader module
+Import this using python to get access to helper methods for reading database.db files
+Authors: Elijah Harrison and Eli Jukes
+"""
+
+import sqlite3
+
+class table_reader:
+    """import this module to access tables within database"""
+    def __init__(self, database_filename: str, table_name: str):
+        self.database   = database_filename
+        self.table      = table_name
+
+        self.connection = sqlite3.connect(database_filename)
+        self.cursor     = self.connection.cursor()
+
+        # set self.connection and self.cursor
+        self.table_init()
+        
+
+    """ HELPER METHODS """
+    # define method for resetting self.connection and self.cursor
+    def table_init(self):
+        table_headers = "name" # TODO: construct table_header in ui methods below
+        self.cursor.execute(f"CREATE TABLE IF NOT EXISTS {self.table} (id integer PRIMARY KEY, {table_headers})")
+
+    # read
+    def read(self):
+        """ display all table contents """
+        # TODO: get this to work
+        self.cursor.execute(f"SELECT * FROM {self.table}")
+        for record in self.cursor.fetchall(): print(record)
+        print()
+
+    # TODO: Eli Jukes
+    # append
+    # delete
+    def delete(self):
+        """ delete one row from the table in the database """
+        name = input("Spell Name: ")
+        values = (name,)
+        self.cursor.execute(f"DELETE FROM {self.table} WHERE name = ?", values)
+        self.connection.commit()
+
+    # update
+    def update(self):
+        #TODO: figure out what data will most likely be updated by a user, what variables are we updating
+        self.cursor.execute(f"UPDATE {self.table} SET #### WHERE ")
+    # sort
+    #inner join
+
+    """ USER INTERFACE METHODS """
+    # TODO: define user interaction methods which call above helper methods

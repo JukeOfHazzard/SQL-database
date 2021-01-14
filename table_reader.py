@@ -60,6 +60,11 @@ class table_reader:
         #TODO: figure out what data will most likely be updated by a user, what variables are we updating
         self.cursor.execute(f"UPDATE {self.table} SET #### WHERE ")
     # sort
+    def search(self):
+        pass
+    #display
+    def display(self):
+        pass
 
     """ inner join """
     # parameter: new table
@@ -68,6 +73,28 @@ class table_reader:
 
     """ USER INTERFACE METHODS """
     # TODO: define user interaction methods which call above helper methods
+    def UI(self):
+        while True:
+            print("1) Display ")
+            print("2) Add ")
+            print("3) Update ")
+            print("4) Delete ")
+            print("5) Query")
+            print("6) Quit")
+            choice = input("> ")
+
+            #1 = Display
+            if   choice == "1": self.display()
+            #2 = Add
+            elif choice == "2": self.add_row()
+            #3 = Update
+            elif choice == "3": self.update()
+            #4 = Delete
+            elif choice == "4": self.delete()
+            #5 = Query
+            elif choice == "5": self.search()
+            #6 = Quit
+            else: break
 
 
 # example of main module

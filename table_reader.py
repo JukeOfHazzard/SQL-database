@@ -45,7 +45,28 @@ class table_reader:
     # TODO: Eli Jukes
     # append
     def add_row(self):
-        pass
+        s_name = input("Name the spell: ")
+        level = input("What level does this spell need to be cast at?") 
+        s_type = input("What scchool type of spell is it.") 
+        ritual = bool(input("Is this a ritual spell [True/False]"))
+        casting_time = input("How long does it take to cast the spell?") 
+        components = input("Which componets does it use [V, S, M]")
+        duration = input("What is the duration of the spell? ") 
+        bard  = bool(input("Can this spell be used by Bards [True/False]"))
+        barbarian = bool(input("Can this spell be used by Barbarians [True/False]"))
+        cleric = bool(input("Can this spell be used by Clerics [True/False]"))
+        druid = bool(input("Can this spell be used by Druids [True/False]"))
+        figher_rogue  = bool(input("Can this spell be used by Fighters or Rogues [True/False]"))
+        monk  = bool(input("Can this spell be used by Monks [True/False]"))
+        paladin   = bool(input("Can this spell be used by Paladins [True/False]"))
+        ranger = bool(input("Can this spell be used by Rangers [True/False]"))
+        sorcerer  = bool(input("Can this spell be used by Sorcerers [True/False]"))
+        warlock   = bool(input("Can this spell be used by Warlocks [True/False]"))
+        wizard = bool(input("Can this spell be used by Wizards [True/False]"))
+        values = (s_name, level, s_type, ritual, casting_time, components, duration, bard, barbarian, cleric, druid,
+                figher_rogue, monk, paladin, ranger, sorcerer, warlock, wizard)
+        self.cursor.execute(f"INSERT INTO {self.table} VALUES  WHERE values = (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", values)
+        self.connection.commit()
 
     # delete
     def delete(self):
@@ -57,14 +78,24 @@ class table_reader:
 
     # update
     def update(self):
-        #TODO: figure out what data will most likely be updated by a user, what variables are we updating
-        self.cursor.execute(f"UPDATE {self.table} SET #### WHERE ")
+        #TODO: figure out how t display all the types of different data collumns there are and let the user pick.
+        # use the table_maker file to read the database and then print off the collumn names.
+        # Do to also get lines 48 - 65 also in there   
+        variable = input("which part of the spell are you trying to update:")
+        value = input("What do you want it to be set to?")
+        self.cursor.execute(f"UPDATE {self.table} SET {variable} WHERE value = (?)", value)
+        self.connection.commit()
     # sort
     def search(self):
-        pass
+        variable = input("What type of spell are you looking for? ")
+        value = input("What do you want it to be set to? ")
+        self.cursor.execute(f"UPDATE {self.table} SET {variable} WHERE value = (?)", value)
+        self.connection.commit()
+        
     #display
     def display(self):
-        pass
+        self.cursor.execute(f"SELECT * FROM {self.table}")
+        self.connection.commit()
 
     """ inner join """
     # parameter: new table

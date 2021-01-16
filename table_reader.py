@@ -5,8 +5,10 @@ Authors: Elijah Harrison and Eli Jukes
 """
 
 import sqlite3
+import pandas as pd
 
 class table_reader:
+    """ HELPER METHODS: To make this into a class to work with easier. """
     """import this module to access tables within database"""
     def __init__(self, database_filename: str, table_name: str):
         self.database   = database_filename
@@ -15,75 +17,21 @@ class table_reader:
         self.connection = sqlite3.connect(database_filename)
         self.cursor     = self.connection.cursor()
 
-        # set self.connection and self.cursor
-        self.table_init()
-        
-
-    """ HELPER METHODS """
+        #acctually make it into a database
+        self.load_csv()
+    
+    
     def load_csv(self):
-        # TODO: transfer from main.py after Eli has edited this
-        pass
+        # load the data into a Pandas DataFrame
+        spell1 = pd.read_csv(self.table)
+        # write the data to a sqlite table
+        spell1.to_sql(self.table, self.connection, if_exists='replace', index = False)
 
-    def table_init(self):
-        """  """
-        table_headers = "name" # TODO: construct table_header in ui methods below
-        self.cursor.execute(f"CREATE TABLE IF NOT EXISTS {self.table} (id integer PRIMARY KEY, {table_headers})")
-
-    # read
-    def read(self):
-        """ display all table contents """
-        # TODO: get this to work
-        self.cursor.execute(f"SELECT * FROM {self.table}")
-        for record in self.cursor.fetchall(): print(record)
-        print()
-
-    def add_column(self, column_name: str, data_type: str):
-        """ add column """
-        self.cursor.execute(f"ALTER TABLE {self.table} ADD {column_name} {data_type}")
-
-
-    # TODO: Eli Jukes
-    # append
-    def add_row(self):
-        values = []
-        column_names = ["Name,Level,Type,Ritual,Casting Time,Range,Components,Duration,Bard,Barbarian,Cleric,Druid,Fighter/Rogue,Monk,Paladin,Ranger,Sorcerer,Warlock,Wizard"]
-        for i in column_names:
-            data = input(f"Spell {i}: ")
-            values.append(data)
-        convert = tuple(values)
-        self.cursor.execute(f"SELECT columns FROM {self.table}")
-        self.cursor.execute(f"INSERT INTO {self.table} VALUES  WHERE values = (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", convert)
-        self.connection.commit()
-
-    # delete
-    def delete(self):
-        """ delete one row from the table in the database """
-        name = input("Spell Name: ")
-        values = (name,)
-        self.cursor.execute(f"DELETE FROM {self.table} WHERE name = ?", values)
-        self.connection.commit()
-
-    # update
-    def update(self):
-        #TODO: figure out how t display all the types of different data collumns there are and let the user pick.
-        # use the table_maker file to read the database and then print off the collumn names.
-        # Do to also get lines 48 - 65 also in there   
-        variable = input("which part of the spell are you trying to update:")
-        value = input("What do you want it to be set to?")
-        self.cursor.execute(f"UPDATE {self.table} SET {variable} WHERE value = (?)", value)
-        self.connection.commit()
-    # sort
-    def search(self):
-        data_search = input("What are you searching in a spell: ")
-        variable = (input("What data are you expecting it to have: "))
-        self.cursor.execute(f"SELECT * FROM {self.table} WHERE {data_search} = {variable};")
-        for line in self.cursor.fetchall():
-            print(line)
-        print()
-
-        
+    """ Base Functions to do for the module"""
+    #Eli Jukes
     #display
     def display(self):
+        """ Will show all the information in the database. """
         self.cursor.execute(f"SELECT * FROM {self.table}")
         for line in self.cursor.fetchall():
             for part in line:
@@ -91,21 +39,87 @@ class table_reader:
             print()
         print()
 
+    # append
+    def add_row(self):
+        """ This will ask the user to for information to fill in as many columns that it counts in the 
+        database. Then it will add all that information in a new row into the database. """
+        values = []
+        self.cursor.execute("SELECT * FROM spells;")
+        row = list(self.cursor.description) #Will look at the tables and get info from reach column 
+        for column in row: 
+            convert = list(column)
+            data = input(f"Spell {convert[0]}: ")
+            values.append(data)
+        convert = tuple(values)
+        self.cursor.execute(f"SELECT columns FROM {self.table}")
+        
+        #TODO: figure out how to use pandas/python to make that tuple of ?'s the exact measure as the input list 
+        self.cursor.execute(f"INSERT INTO {self.table} VALUES  WHERE values = (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", convert)
+        self.connection.commit()
+
+    # update
+    def update(self):
+        """Displays all the types of different data collumns there are and let the user pick.
+        Then will ask the user what they want to replace."""
+
+        self.cursor.execute("SELECT * FROM spells;")
+        row = list(self.cursor.description) #Will look at the tables and get info from reach column 
+        for column in row: 
+            convert = list(column)
+            print(convert[0]) 
+        variable = input("which part of the spell, shown above, are you trying to update:")
+        value = input("What do you want it to be set to?")
+
+        #TODO: figure out how to only update one row, because this looks like this updates the tabel
+        #may have to do with the variables I am using.
+        self.cursor.execute(f"UPDATE {self.table} SET {variable} WHERE value = (?)", value)
+        self.connection.commit()
+
+    # delete
+    def delete(self):
+        """ delete one row from the table in the database """
+
+        name = input("Spell Name: ")
+        values = (name,)
+        self.cursor.execute(f"DELETE FROM {self.table} WHERE name = ?", values)
+        self.connection.commit()
+        
+    """ Stretch Challenges"""  
+    # sort
+    def search(self):
+        """ Allows the user to sort through the file data by what is expected 
+        in the column they are looking at."""
+
+        data_search = input("What are you searching in a spell: ")
+        variable = (input("What data are you expecting it to have: "))
+        self.cursor.execute(f"SELECT * FROM {self.table} WHERE {data_search} = {variable};")
+        for line in self.cursor.fetchall():
+            print(line)
+        print()
+
     """ inner join """
+    def inner_join(self):
+        pass
     # parameter: new table
     # merge self table and new table
     # return: combined table
 
     """ USER INTERFACE METHODS """
-    # TODO: define user interaction methods which call above helper methods
     def UI(self):
+        """
+        Defines user interaction methods which call above helper methods.
+        Lets the user loop through untill they get all the needed information
+        from the data; calls the neccessary functions to reach that
+        information.
+        """
         while True:
             print("1) Display ")
             print("2) Add ")
             print("3) Update ")
             print("4) Delete ")
-            print("5) Query")
-            print("6) Quit")
+            print("5) Search")
+            print("6) Merge in another table.")
+            print("7) Quit")
             choice = input("> ")
 
             #1 = Display
@@ -118,5 +132,17 @@ class table_reader:
             elif choice == "4": self.delete()
             #5 = Query
             elif choice == "5": self.search()
-            #6 = Quit
+            #6 = inner join
+            elif choice == "6": self.inner_join() 
+            #7 =Quit
             else: break
+    
+    """ EXTRA STUFF: things for later use"""
+    def table_init(self):
+        """  """
+        table_headers = "name" # TODO: construct table_header in ui methods below
+        self.cursor.execute(f"CREATE TABLE IF NOT EXISTS {self.table} (id integer PRIMARY KEY, {table_headers})")
+
+    def add_column(self, column_name: str, data_type: str):
+        """ add column """
+        self.cursor.execute(f"ALTER TABLE {self.table} ADD {column_name} {data_type}")

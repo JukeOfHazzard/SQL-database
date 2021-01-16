@@ -31,7 +31,8 @@ insert, modify, delete, and retrieve (or query) data
 * [pandas to sqlite](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_sql.html)
 * [More sql commands that I need](https://www.sqlitetutorial.net/sqlite-select/)
 * [from list to Tuple and visa versa](https://www.geeksforgeeks.org/python-convert-a-list-into-a-tuple/)
-
+* [to find the headers of sqlite database lists](https://www.xspdf.com/resolution/53910764.html)
+        - "cursor.description Outputs something like this:"
 # Future Work
 
 {Make a list of things that you need to fix, improve, and add in the future.}

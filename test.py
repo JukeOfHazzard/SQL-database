@@ -1,3 +1,8 @@
+"""
+The file used to test an practice all things studdied out from sorces found on the internet.
+The links to those found sources are in the README file.
+"""
+
 import sqlite3
 import pandas as pd
 
@@ -12,9 +17,14 @@ spell1.to_sql('spells', conn, if_exists='replace', index = False)
 
 # get column names
 c.execute("SELECT * FROM spells;")
-row = c.fetchone()
-column_names = row
-print(column_names)
+row = list(c.description)
+for collumn in row:
+   convert = list(collumn)
+   print(convert[0])
+#   for top in convert:
+#      print(top[0])
+#print()
+
 
 # display table
 # c.execute("SELECT * FROM spells;")

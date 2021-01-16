@@ -52,9 +52,11 @@ class table_reader:
             values.append(data)
         convert = tuple(values)
         self.cursor.execute(f"SELECT columns FROM {self.table}")
-        
-        #TODO: figure out how to use pandas/python to make that tuple of ?'s the exact measure as the input list 
-        self.cursor.execute(f"INSERT INTO {self.table} VALUES  WHERE values = (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", convert)
+        q_marks = "?"
+        how_many_columns = len(values)
+        for i in range(how_many_columns - 1): #makes sure that the tuple of ?'s the exact measure as the input list 
+            q_marks += ",?"
+        self.cursor.execute(f"INSERT INTO {self.table} VALUES  WHERE values = ({q_marks})", convert)
         self.connection.commit()
 
     # update

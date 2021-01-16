@@ -19,8 +19,8 @@ spell1.to_sql('spells', conn, if_exists='replace', index = False)
 c.execute("SELECT * FROM spells;")
 row = list(c.description)
 for collumn in row:
-   convert = list(collumn)
-   print(convert[0])
+  convert = list(collumn)
+  print(convert[0])
 #   for top in convert:
 #      print(top[0])
 #print()

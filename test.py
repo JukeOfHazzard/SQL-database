@@ -11,8 +11,9 @@ spell1 = pd.read_csv('Spells_Player.csv')
 spell1.to_sql('spells', conn, if_exists='replace', index = False)
 
 # get column names
+c.execute("SELECT * FROM spells;")
 row = c.fetchone()
-column_names = row.keys()
+column_names = row
 print(column_names)
 
 # display table

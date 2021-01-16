@@ -45,27 +45,14 @@ class table_reader:
     # TODO: Eli Jukes
     # append
     def add_row(self):
-        s_name = input("Name the spell: ")
-        level = input("What level does this spell need to be cast at?") 
-        s_type = input("What scchool type of spell is it.") 
-        ritual = bool(input("Is this a ritual spell [True/False]"))
-        casting_time = input("How long does it take to cast the spell?") 
-        components = input("Which componets does it use [V, S, M]")
-        duration = input("What is the duration of the spell? ") 
-        bard  = bool(input("Can this spell be used by Bards [True/False]"))
-        barbarian = bool(input("Can this spell be used by Barbarians [True/False]"))
-        cleric = bool(input("Can this spell be used by Clerics [True/False]"))
-        druid = bool(input("Can this spell be used by Druids [True/False]"))
-        figher_rogue  = bool(input("Can this spell be used by Fighters or Rogues [True/False]"))
-        monk  = bool(input("Can this spell be used by Monks [True/False]"))
-        paladin   = bool(input("Can this spell be used by Paladins [True/False]"))
-        ranger = bool(input("Can this spell be used by Rangers [True/False]"))
-        sorcerer  = bool(input("Can this spell be used by Sorcerers [True/False]"))
-        warlock   = bool(input("Can this spell be used by Warlocks [True/False]"))
-        wizard = bool(input("Can this spell be used by Wizards [True/False]"))
-        values = (s_name, level, s_type, ritual, casting_time, components, duration, bard, barbarian, cleric, druid,
-                figher_rogue, monk, paladin, ranger, sorcerer, warlock, wizard)
-        self.cursor.execute(f"INSERT INTO {self.table} VALUES  WHERE values = (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", values)
+        values = []
+        column_names = ["Name,Level,Type,Ritual,Casting Time,Range,Components,Duration,Bard,Barbarian,Cleric,Druid,Fighter/Rogue,Monk,Paladin,Ranger,Sorcerer,Warlock,Wizard"]
+        for i in column_names:
+            data = input(f"Spell {i}: ")
+            values.append(data)
+        convert = tuple(values)
+        self.cursor.execute(f"SELECT columns FROM {self.table}")
+        self.cursor.execute(f"INSERT INTO {self.table} VALUES  WHERE values = (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", convert)
         self.connection.commit()
 
     # delete
@@ -87,15 +74,22 @@ class table_reader:
         self.connection.commit()
     # sort
     def search(self):
-        variable = input("What type of spell are you looking for? ")
-        value = input("What do you want it to be set to? ")
-        self.cursor.execute(f"UPDATE {self.table} SET {variable} WHERE value = (?)", value)
-        self.connection.commit()
+        data_search = input("What are you searching in a spell: ")
+        variable = (input("What data are you expecting it to have: "))
+        self.cursor.execute(f"SELECT * FROM {self.table} WHERE {data_search} = {variable};")
+        for line in self.cursor.fetchall():
+            print(line)
+        print()
+
         
     #display
     def display(self):
         self.cursor.execute(f"SELECT * FROM {self.table}")
-        self.connection.commit()
+        for line in self.cursor.fetchall():
+            for part in line:
+                print(part)
+            print()
+        print()
 
     """ inner join """
     # parameter: new table
@@ -126,11 +120,3 @@ class table_reader:
             elif choice == "5": self.search()
             #6 = Quit
             else: break
-
-
-# example of main module
-# data is in excel file, exported to two .csv files
-spells1 = table_reader("spells1.db", "spells")
-# in table_reader object, import .csv data into .db file under table name spells
-spells2 = table_reader("spells2.db", "spells")
-# in table_reader object, import .csv data into .db file under table name spells

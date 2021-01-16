@@ -10,11 +10,16 @@ spell1 = pd.read_csv('Spells_Player.csv')
 # write the data to a sqlite table
 spell1.to_sql('spells', conn, if_exists='replace', index = False)
 
+# get column names
+row = c.fetchone()
+column_names = row.keys()
+print(column_names)
 
-c.execute("SELECT * FROM spells;")
-for line in c.fetchall():
-   print(line)
-print()
+# display table
+# c.execute("SELECT * FROM spells;")
+# for line in c.fetchall():
+#    print(line)
+# print()
 
 #for item in c.fetchall()
 #    variable = input("")

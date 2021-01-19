@@ -15,12 +15,16 @@ spell1 = pd.read_csv('Spells_Player.csv')
 # write the data to a sqlite table
 spell1.to_sql('spells', conn, if_exists='replace', index = False)
 
+
+c.execute(f"SELECT * FROM spells ORDER BY Name DESC LIMIT 1;")
+first_of_last = list(c.fetchone())
+print(first_of_last[0])
 # get column names
-c.execute("SELECT * FROM spells;")
-row = list(c.description)
-for collumn in row:
-  convert = list(collumn)
-  print(convert[0])
+#c.execute("SELECT * FROM spells;")
+# row = list(c.description)
+# for collumn in row:
+#   convert = list(collumn)
+#   print(convert[0])
 #   for top in convert:
 #      print(top[0])
 #print()

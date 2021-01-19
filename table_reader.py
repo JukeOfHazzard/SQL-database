@@ -14,7 +14,7 @@ class table_reader:
         self.database   = database_filename
         self.table      = table_name
 
-        self.connection = sqlite3.connect(database_filename)
+        self.connection = sqlite3.connect(database_filename + ".db")
         self.cursor     = self.connection.cursor()
 
         #acctually make it into a database
@@ -25,18 +25,18 @@ class table_reader:
         # load the data into a Pandas DataFrame
         spell1 = pd.read_csv(self.table)
         # write the data to a sqlite table
-        spell1.to_sql(self.table, self.connection, if_exists='replace', index = False)
+        spell1.to_sql(self.database, self.connection, if_exists='replace', index = False)
 
     """ Base Functions to do for the module"""
     #Eli Jukes
     #display
     def display(self):
         """ Will show all the information in the database. """
-        self.cursor.execute(f"SELECT * FROM {self.table}")
+        self.cursor.execute(f"SELECT * FROM {self.database}")
         for line in self.cursor.fetchall():
-            for part in line:
-                print(part)
-            print()
+            print(line)
+            # for part in line:
+            #     print(part)
         print()
 
     # append
@@ -44,19 +44,19 @@ class table_reader:
         """ This will ask the user to for information to fill in as many columns that it counts in the 
         database. Then it will add all that information in a new row into the database. """
         values = []
-        self.cursor.execute("SELECT * FROM spells;")
+        self.cursor.execute(f"SELECT * FROM {self.database};")
         row = list(self.cursor.description) #Will look at the tables and get info from reach column 
         for column in row: 
             convert = list(column)
             data = input(f"Spell {convert[0]}: ")
             values.append(data)
         convert = tuple(values)
-        self.cursor.execute(f"SELECT columns FROM {self.table}")
+        self.cursor.execute(f"SELECT columns FROM {self.database}")
         q_marks = "?"
         how_many_columns = len(values)
         for i in range(how_many_columns - 1): #makes sure that the tuple of ?'s the exact measure as the input list 
             q_marks += ",?"
-        self.cursor.execute(f"INSERT INTO {self.table} VALUES  WHERE values = ({q_marks})", convert)
+        self.cursor.execute(f"INSERT INTO {self.database} VALUES  WHERE values = ({q_marks})", convert)
         self.connection.commit()
 
     # update
@@ -64,7 +64,7 @@ class table_reader:
         """Displays all the types of different data collumns there are and let the user pick.
         Then will ask the user what they want to replace."""
 
-        self.cursor.execute("SELECT * FROM spells;")
+        self.cursor.execute(f"SELECT * FROM {self.database};")
         row = list(self.cursor.description) #Will look at the tables and get info from reach column 
         for column in row: 
             convert = list(column)
@@ -74,7 +74,7 @@ class table_reader:
 
         #TODO: figure out how to only update one row, because this looks like this updates the tabel
         #may have to do with the variables I am using.
-        self.cursor.execute(f"UPDATE {self.table} SET {variable} WHERE value = (?)", value)
+        self.cursor.execute(f"UPDATE {self.database} SET {variable} WHERE value = (?)", value)
         self.connection.commit()
 
     # delete
@@ -83,7 +83,7 @@ class table_reader:
 
         name = input("Spell Name: ")
         values = (name,)
-        self.cursor.execute(f"DELETE FROM {self.table} WHERE name = ?", values)
+        self.cursor.execute(f"DELETE FROM {self.database} WHERE name = ?", values)
         self.connection.commit()
         
     """ Stretch Challenges"""  
@@ -94,15 +94,21 @@ class table_reader:
 
         data_search = input("What are you searching in a spell: ")
         variable = (input("What data are you expecting it to have: "))
-        self.cursor.execute(f"SELECT * FROM {self.table} WHERE {data_search} = {variable};")
+        self.cursor.execute(f"SELECT * FROM {self.database} WHERE {data_search} = {variable};")
         for line in self.cursor.fetchall():
             print(line)
         print()
 
     """ inner join """
     def inner_join(self):
-        pass
-    # parameter: new table
+        new_database = input("What do you want to call you new database file? ")
+        file_source = input("What is the csv file that you are extracting the data from?")
+        table_2 = table_reader(new_database, file_source)
+        self.cursor.execute(f"SELECT * FROM {self.database} ORDER BY column DESC LIMIT 1;")
+        last_entry = list(self.cursor.fetchone())
+        
+        #TODO: join the second table with the first one so you can view them.
+        self.cursor.execute(f"SELECT * FROM {self.database} INNER JOIN {table_2.database} ON {self.database}.Name = {table_2.database}.Name WHERE Name = {last_entry[0]};")
     # merge self table and new table
     # return: combined table
 

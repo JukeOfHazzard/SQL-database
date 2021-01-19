@@ -104,7 +104,7 @@ class table_reader:
         new_database = input("What do you want to call you new database file? ")
         file_source = input("What is the csv file that you are extracting the data from?")
         table_2 = table_reader(new_database, file_source)
-        self.cursor.execute(f"SELECT * FROM {self.database} ORDER BY column DESC LIMIT 1;")
+        self.cursor.execute(f"SELECT * FROM {self.database} ORDER BY Name DESC LIMIT 1;")
         last_entry = list(self.cursor.fetchone())
         
         #TODO: join the second table with the first one so you can view them.

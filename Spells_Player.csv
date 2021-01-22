@@ -1,10 +1,10 @@
 ﻿Name,Level,Type,Ritual,Casting Time,Range,Components,Duration,Bard,Barbarian,Cleric,Druid,Fighter/Rogue,Monk,Paladin,Ranger,Sorcerer,Warlock,Wizard
 Acid Splash,0,Conjuration,,1 action,60 feet,V.S,Instant,,,,,,,,,TRUE,,TRUE
-Aid,2,Abjuration,,1 action,30 feet,"V,S,M",8 Hours,,,TRUE,,,,TRUE,,,,
+Aid,2,Abjuration,,1 action,30 feet,"V.S.M",8 Hours,,,TRUE,,,,TRUE,,,,
 Alarm,1,Abjuration,TRUE,1 minute,30 feet,V.S.M,8 Hours,,,,,,,,TRUE,,,TRUE
 Alter Self,2,Transmutation,,1 action,Self,V.S,Conc. 1 Hour,,,,,,,,,TRUE,,TRUE
-Animal Friendship,1,Enchantment,,1 action,30 feet,"V,S,M",24 Hours,TRUE,,,TRUE,,,,TRUE,,,
-Animal Messenger,2,Enchantment,TRUE,1 action,30 feet,"V,S,M",24 Hours,TRUE,,,TRUE,,,,TRUE,,,
+Animal Friendship,1,Enchantment,,1 action,30 feet,"V.S.M",24 Hours,TRUE,,,TRUE,,,,TRUE,,,
+Animal Messenger,2,Enchantment,TRUE,1 action,30 feet,"V.S.M",24 Hours,TRUE,,,TRUE,,,,TRUE,,,
 Animal Shapes,8,Transmutation,,1 actions,30 feet,"V,S","Conc, 24 Hours",,,,TRUE,,,,,,,
 Animate Dead,3,Necromancy,,1 minute,10 feet,V.S.M,Instant,,,TRUE,,,,,,,,TRUE
 Animate Object,5,Transmutation,,1 action,120 feet,V.S,Conc. 1 minute,TRUE,,,,,,,,TRUE,,TRUE
@@ -14,25 +14,25 @@ Antipathy/Sypmpathy,8,Enchantment,,1 hour,60 feet,V.S.M,10 Days,,,,TRUE,,,,,,,TR
 Arcane Eye,4,Divination,,1 action,30 feet,V.S.M,Conc. 1 Hour,,,,,,,,,,,TRUE
 Arcane Gate,6,Conjuration,,1 action,500 feet,V.S,Conc. 10 minutes,,,,,,,,,TRUE,TRUE,TRUE
 Arcane Lock,2,Abjuration,,1 action,Touch,V.S.M,Until Dispelled,,,,,,,,,,,TRUE
-Armor of Agathys,1,Abjuration,,1 action,Self,"V,S,M",1 Hour,,,,,,,,,,TRUE,
+Armor of Agathys,1,Abjuration,,1 action,Self,"V.S.M",1 Hour,,,,,,,,,,TRUE,
 Arms of Hadar,1,Conjuration,,1 action,Self (10ft radius),"V,S",Instant,,,,,,,,,,TRUE,
 Astral Projection,9,Necromancy,,1 hour,10 feet,V.S.M,Special,,,TRUE,,,,,,,TRUE,TRUE
-Augury,2,Divination,TRUE,1 minute,Self,"V,S,M",Instant,,,TRUE,,,,,,,,
+Augury,2,Divination,TRUE,1 minute,Self,"V.S.M",Instant,,,TRUE,,,,,,,,
 Aura of Life,4,Abjuration,,1 action,Self (30ft radius),V,"Conc, 10 minutes",,,,,,,TRUE,,,,
 Aura of Purity,4,Abjuratioin,,1 action,Self (30ft radius),V,"Conc, 10 minutes",,,,,,,TRUE,,,,
 Aura of Vitality,3,Evocation,,1 action,Self (30ft radius),V,"Con, 1 minute",,,,,,,TRUE,,,,
-Awaken,5,Transmutation,,8 hours,Touch,"V,S,M",Instant,TRUE,,,TRUE,,,,,,,
-Bane,1,Enchantment,,1 action,30 feet,"V,S,M","Conc, 1 minute",TRUE,,TRUE,,,,,,,,
+Awaken,5,Transmutation,,8 hours,Touch,"V.S.M",Instant,TRUE,,,TRUE,,,,,,,
+Bane,1,Enchantment,,1 action,30 feet,"V.S.M","Conc, 1 minute",TRUE,,TRUE,,,,,,,,
 Banishing Smite,5,Enchantment,,1 Bonus actiion,Self,V,"Conc, 1 minute",,,,,,,TRUE,,,,
 Banishment,4,Abjuration,,1 action,60 feet,V.S.M,Conc. 1 minute,,,TRUE,,,,TRUE,,TRUE,TRUE,TRUE
-Barkskin,2,Transmutation,,1 action,Touch,"V,S,M","Conc, 1 Hour",,,,TRUE,,,,TRUE,,,
+Barkskin,2,Transmutation,,1 action,Touch,"V.S.M","Conc, 1 Hour",,,,TRUE,,,,TRUE,,,
 Beacon of Hope,3,Abjuration,,1 action,30 feet,"V,S","Conc, 1 minute",,,TRUE,,,,,,,,
 Beast Sense,2,Divination,TRUE,1 action,Touch,S,"Conc, 1 Hour",,TRUE,,TRUE,,,,TRUE,,,
 Bestow Curse,3,Necromancy,,1 action,Touch,V.S,Conc. 1 minute,TRUE,,TRUE,,,,,,,,TRUE
 Bigby's Hand,5,Evocation,,1 action,120 feet,V.S.M,Conc. 1 minute,,,,,,,,,,,TRUE
 Blade Barrier,6,Evocation,,1 action,90 feet,"V,S","Conc, 10 minutes",,,TRUE,,,,,,,,
 Blade Ward,0,Abjuration,,1 action,Self,V.S,1 Round,TRUE,,,,,,,,TRUE,TRUE,TRUE
-Bless,1,Enchantment,,1 action,30 feet,"V,S,M","Conc, 1 minute",,,TRUE,,,,TRUE,,,,
+Bless,1,Enchantment,,1 action,30 feet,"V.S.M","Conc, 1 minute",,,TRUE,,,,TRUE,,,,
 Blight,4,Necromancy,,1 action,30 feet,V.S,Instant,,,,TRUE,,,,,TRUE,TRUE,TRUE
 Blinding Smite,3,Evocation,,1 Bonus action,Self,V,"Conc, 1 minute",,,,,,,TRUE,,,,
 Blindness/Deafness,2,Necromancy,,1 action,30 feet,V,1 minute,TRUE,,TRUE,,,,,,TRUE,,TRUE
@@ -54,7 +54,7 @@ Cloud of Daggers,2,Conjuration,,1 action,60 feet,V.S.M,Conc. 1 minute,TRUE,,,,,,
 Cloudkill,5,Conjuration,,1 action,120 feet,"V,S","Conc, 10 minutes",,,,,,,,,TRUE,,
 Color Spray,1,Illusion,,1 action,Self (15ft cone),V.S.M,1 round,,,,,,,,,TRUE,,TRUE
 Command,1,Enchantment,,1 action,60 feet,V,1 round,,,TRUE,,,,TRUE,,,,
-Commune,5,Divination,TRUE,1 minute,Self,"V,S,M",1 minute,,,TRUE,,,,,,,,
+Commune,5,Divination,TRUE,1 minute,Self,"V.S.M",1 minute,,,TRUE,,,,,,,,
 Commune with nature,5,Divination,TRUE,1 minute,Self,"V,S",Instant,,TRUE,,TRUE,,,,TRUE,,,
 Compelled Duel,1,Enchantment,,1 Bonus action,30 feet,V,"Conc, 1 minute",,,,,,,TRUE,,,,
 Comprehend Lang.,1,Divination,TRUE,1 action,Self,V.S.M,1 Hour,TRUE,,,,,,,,TRUE,TRUE,TRUE
@@ -62,23 +62,23 @@ Compulsion,4,Enchantment,,1 action,30 feet,"V,S","Conc, 1 minute",TRUE,,,,,,,,,,
 Cone of Cold,5,Evocation,,1 action,Self (60ft cone),V.S.M,Instant,,,,,,,,,TRUE,,TRUE
 Confusion,4,Enchantment,,1 action,90 feet,V.S.M,Conc. 1 minute,TRUE,,,TRUE,,,,,TRUE,,TRUE
 Conjure Animals,3,Conjuration,,1 action,60 feet,"V,S","Conc, 1 Hour",,,,TRUE,,,,TRUE,,,
-Conjure Barrage,3,Conjuration,,1 action,Self (60ft cone),"V,S,M",Instant,,,,,,,,TRUE,,,
+Conjure Barrage,3,Conjuration,,1 action,Self (60ft cone),"V.S.M",Instant,,,,,,,,TRUE,,,
 Conjure Celestial,7,Conjuration,,1 minute,90 feet,"V,S","Conc, 1 Hour",,,TRUE,,,,,,,,
 Conjure Elemental,5,Conjuration,,1 minute,90 feet,V.S.M,Conc. 1 Hour,,,,TRUE,,,,,,,TRUE
 Conjure Fey,6,Conjuration,,1 minute,90 feet,"V,S","Conc, 1 Hour",,,,TRUE,,,,,,TRUE,
 Conjure minor Elemental,4,Conjuration,,1 minute,90 feet,V.S,Conc. 1 Hour,,,,TRUE,,,,,,,TRUE
-Conjure Volley,5,Conjuration,,1 action,150 feet,"V,S,M",Instant,,,,,,,,TRUE,,,
-Conjure Woodland beings,4,Conjuration,,1 action,60 feet,"V,S,M","Conc, 1 Hour",,,,TRUE,,,,TRUE,,,
+Conjure Volley,5,Conjuration,,1 action,150 feet,"V.S.M",Instant,,,,,,,,TRUE,,,
+Conjure Woodland beings,4,Conjuration,,1 action,60 feet,"V.S.M","Conc, 1 Hour",,,,TRUE,,,,TRUE,,,
 Contact other Plane,5,divination,TRUE,1 minute,Self,V,1 minute,,,,,,,,,,TRUE,
 Contagion,5,Necromancy,,1 action,Touch,"V,S",7 Days,,,TRUE,TRUE,,,,,,,
 Contingency,6,Evocation,,10 minutes,Self,V.S.M,10 Days,,,,,,,,,,,TRUE
 Continual Flame,2,Evocation,,1 acton,Touch,V.S.M,Until Dispelled,,,TRUE,,,,,,,,TRUE
 Control Water,4,Transmutation,,1 action,300 feet,V.S.M,Conc. 10 minutes,,,TRUE,TRUE,,,,,,,TRUE
 Control Weather,8,Transmutation,,10 minutes,Self (5mi radius),V.S.M,Conc. 8 Hours,,,TRUE,TRUE,,,,,,,TRUE
-Cordon of Arrows,2,Transmutation,,1 action,5  feet,"V,S,M",8 Hours,,,,,,,,TRUE,,,
+Cordon of Arrows,2,Transmutation,,1 action,5  feet,"V.S.M",8 Hours,,,,,,,,TRUE,,,
 Counterspell,3,Abjuration,,1 reaction,60 feet,S,Instant,,,,,,,,,,TRUE,TRUE
 Create food and water,3,Conjuration,,1 action,30 feet,"V,S",Instant,,,TRUE,,,,TRUE,,,,
-Create or Destroy Water,1,Transmutation,,1 action,30 feet,"V,S,M",Instant,,,TRUE,TRUE,,,,,,,
+Create or Destroy Water,1,Transmutation,,1 action,30 feet,"V.S.M",Instant,,,TRUE,TRUE,,,,,,,
 Create Undead,6,Necromancy,,1 minute,10 feet,V.S.M,Instant,,,TRUE,,,,,,,TRUE,TRUE
 Creation,5,Illusion,,1 minute,30 feet,V.S.M,Special,,,,,,,,,TRUE,,TRUE
 Crown of Madness,2,Enchantment,,1 action,120 feet,V.S,Conc. 1 minute,TRUE,,,,,,,,TRUE,TRUE,TRUE
@@ -94,15 +94,15 @@ Demiplane,8,Conjuration,,1 action,60 feet,S,1 Hour,,,,,,,,,,TRUE,TRUE
 Destructive Wave,5,Evocation,,1 action,Self (30ft radius),V,Instant,,,,,,,TRUE,,,,
 Detect Evil & Good,1,Divination,,1 action,Self,"V,S","Conc, 10 minutes",,,TRUE,,,,TRUE,,,,
 Detect Magic,1,Divination,TRUE,1 action,Self,V.S,Conc. 10 minutes,TRUE,,TRUE,TRUE,,,TRUE,TRUE,TRUE,,TRUE
-Detect Poison & Disease,1,Divination,TRUE,1 action,Self,"V,S,M","Conc, 10 minutes",,,TRUE,TRUE,,,TRUE,TRUE,,,
+Detect Poison & Disease,1,Divination,TRUE,1 action,Self,"V.S.M","Conc, 10 minutes",,,TRUE,TRUE,,,TRUE,TRUE,,,
 Detect Thoughts,2,Divination,,1 action,Self,V.S.M,Conc. 1 minute,TRUE,,,,,,,,TRUE,,TRUE
 Dimension Door,4,Conjuration,,1 action,500 feet,V,Instant,TRUE,,,,,,,,TRUE,TRUE,TRUE
 Disguise Self,1,Illusion,,1 action,Self,V.S,1 Hour,TRUE,,,,,,,,TRUE,,TRUE
 Disintegrate,6,Transmutation,,1 action,60 feet,V.S.M,Instant,,,,,,,,,TRUE,,TRUE
-Dispel Evil & Good,5,Abjuratiion,,1 action,Self,"V,S,M","Conc, 1 minute",TRUE,,TRUE,,,,TRUE,,,,
+Dispel Evil & Good,5,Abjuratiion,,1 action,Self,"V.S.M","Conc, 1 minute",TRUE,,TRUE,,,,TRUE,,,,
 Dispel Magic,3,Abjuration,,1 action,120 feet,V.S,Instant,TRUE,,TRUE,TRUE,,,TRUE,,TRUE,TRUE,TRUE
 Dissonant Whispers,1,Enchantment,,1 action,60 feet,V,Instant,TRUE,,,,,,,,,,
-Divination,4,Divination,TRUE,1 action,Self,"V,S,M",Instant,TRUE,,TRUE,,,,,,,,
+Divination,4,Divination,TRUE,1 action,Self,"V.S.M",Instant,TRUE,,TRUE,,,,,,,,
 Divine Favor,1,Evocation,,1 Bonus action,Self,"V,S","Conc, 1 minute",,,,,,,TRUE,,,,
 Divine Word,7,Evocation,,1 Bonus action,30 feet,V,Instant,,,TRUE,,,,,,,,
 Dominate Beast,4,Enchantment,,1 action,60 feet,"V,S","Conc, 1 minute",,,,TRUE,,,,,TRUE,,
@@ -111,10 +111,10 @@ Dominate Person,5,Enchantment,,1 action,60 feet,V.S,Conc. 1 minute,TRUE,,,,,,,,T
 Drawmij's Instant Summons,6,Conjuration,TRUE,1 minute,Touch,V.S.M,Until Dispelled,,,,,,,,,,,TRUE
 Dream,5,Illusion,,1 minute,Special,V.S.M,8 Hours,TRUE,,,,,,,,,TRUE,TRUE
 Druidcraft,0,Transmutation,,1 action,30 feet,"V,S",Instant,,,,TRUE,,,,,,,
-Earthquake,8,Evocation,,1 action,500 feet,"V,S,M","Conc, 1 minute",,,TRUE,TRUE,,,,,TRUE,,
+Earthquake,8,Evocation,,1 action,500 feet,"V.S.M","Conc, 1 minute",,,TRUE,TRUE,,,,,TRUE,,
 Eldritch Blast,0,Evocation,,1 action,120 feet,"V,S",Instant,,,,,,,,,,TRUE,
 Elemental Weapon,3,Transmutation,,1 action,Touch,"V,S","Conc, 1 Hour",,,,,,,TRUE,,,,
-Enhance Ability,2,Transmutation,,1 action,Touch,"V,S,M","Conc, 1 Hour",TRUE,,TRUE,TRUE,,,,,TRUE,,
+Enhance Ability,2,Transmutation,,1 action,Touch,"V.S.M","Conc, 1 Hour",TRUE,,TRUE,TRUE,,,,,TRUE,,
 Enlarge/Rduce,2,Transmutation,,1 action,30 feet,V.S.M,Conc. 1 minute,,,,,,,,,TRUE,,TRUE
 Ensnaring Stike,1,Conjuration,,1 Bonus action,Self,V,"Conc, 1 minute",,,,,,,,TRUE,,,
 Entangle,1,Conjuration,,1 action,90 feet,"V,S","Conc, 1 minute",,,,TRUE,,,,,,,
@@ -132,20 +132,20 @@ Feeblemind,8,Enchantment,,1 action,150 feet,V.S.M,Instant,TRUE,,,TRUE,,,,,,TRUE,
 Feign Death,3,Necromancy,TRUE,1 action,Touch,V.S.M,1 Hour,TRUE,,TRUE,TRUE,,,,,,,TRUE
 Find Familiar,1,Conjuration,TRUE,1 Hour,10 feet,V.S.M,Instant,,,,,,,,,,,TRUE
 Find Steed,2,Conjuration,,10 minutes,30 feet,"V,S",Instant,,,,,,,TRUE,,,,
-Find the Path,6,Divination,,1 minute,Self,"V,S,M","Conc, 1 Day",TRUE,,TRUE,TRUE,,,,,,,
+Find the Path,6,Divination,,1 minute,Self,"V.S.M","Conc, 1 Day",TRUE,,TRUE,TRUE,,,,,,,
 Find Traps,2,Divination,,1 action,120 feet,"V,S",Instant,,,TRUE,TRUE,,,,TRUE,,,
 Finger of Death,7,Necromancy,,1 action,60 feet,V.S,Instant,,,,,,,,,TRUE,TRUE,TRUE
 Fireball,3,Evocation,,1 action,150 feet,V.S.M,Instant,,,,,,,,,TRUE,,TRUE
 Fire Bolt,0,Evocation,,1 action,120 feet,V.S,Instant,,,,,,,,,TRUE,,TRUE
 Fire Shield,4,Evocation,,1 action,Self,V.S.M,10 minutes,,,,,,,,,,,TRUE
 Fire Storm,7,Evocation,,1 action,150 feet,"V,S",Instant,,,TRUE,TRUE,,,,,TRUE,,
-Flame Blade,2,Evocation,,1 Bonus action,Self,"V,S,M","Conc, 10 minutes",,,,TRUE,,,,,,,
-Flame Strike,5,Evocation,,1 action,60 feet,"V,S,M",Instant,,,TRUE,,,,,,,,
+Flame Blade,2,Evocation,,1 Bonus action,Self,"V.S.M","Conc, 10 minutes",,,,TRUE,,,,,,,
+Flame Strike,5,Evocation,,1 action,60 feet,"V.S.M",Instant,,,TRUE,,,,,,,,
 Flameing Sphere,2,Conjuration,,1 action,60 feet,V.S.M,Conc. 1 minute,,,,TRUE,,,,,,,TRUE
 Flesh to Stone,6,Transmutation,,1 action,60 feet,V.S.M,Conc. 1 minute,,,,,,,,,,TRUE,TRUE
 Fly,3,Transmutation,,1 action,Touch,V.S.M,Conc. 10 minutes,,,,,,,,,TRUE,TRUE,TRUE
 Fog Cloud,1,Conjuration,,1 action,120 feet,V.S,Conc. 1 Hour,,,,TRUE,,,,TRUE,TRUE,,TRUE
-Forbiddance,6,Abjuration,TRUE,10 minutes,Touch,"V,S,M",1 Day,,,TRUE,,,,,,,,
+Forbiddance,6,Abjuration,TRUE,10 minutes,Touch,"V.S.M",1 Day,,,TRUE,,,,,,,,
 Forcecage,7,Evocation,,1 action,100 feet,V.S.M,1 Hour,TRUE,,,,,,,,,TRUE,TRUE
 Foresight,9,Divination,,1 minute,Touch,V.S.M,8 Hours,TRUE,,,TRUE,,,,,,TRUE,TRUE
 Freedom of Movement,4,Abjuration,,1 action,Self,"S,M","Conc, 1 minute",TRUE,,TRUE,TRUE,,,,TRUE,,,
@@ -158,32 +158,32 @@ Giant Insect,4,Transmutation,,1 action,30 feet,"V,S","Conc, 10 minutes",TRUE,,,T
 Glibness,8,Transmutation,,1 action,Self,V,1 Hour,TRUE,,,,,,,,,TRUE,
 Globe of Invulnerability,6,Abjuration,,1 action,Self (10ft radius),V.S.M,Conc. 1 minute,,,,,,,,,TRUE,,TRUE
 Glyph of Warding,3,Abjuration,,1  Hour,Touch,V.S.M,Until Dispeled or Triggered,TRUE,,TRUE,,,,,,,,TRUE
-Goodberry,1,Transmutation,,1 action,Touch,"V,S,M",Instant,,,,TRUE,,,,TRUE,,,
+Goodberry,1,Transmutation,,1 action,Touch,"V.S.M",Instant,,,,TRUE,,,,TRUE,,,
 Grasping Vine,4,Conjuration,,1 Bonus action,30 feet,"V,S","Conc, 1 minute",,,,TRUE,,,,TRUE,,,
 Grease,1,Conjuration,,1 action,60 feet,V.S.M,1 minute,,,,,,,,,,,TRUE
 Greater Invisibility,4,Illusion,,1 action,Touch,V.S,Conc. 1 minute,TRUE,,,,,,,,TRUE,,TRUE
-Greater Restoration,5,Abjuration,,1 action,Touch,"V,S,M",Instant,TRUE,,TRUE,TRUE,,,,,,,
+Greater Restoration,5,Abjuration,,1 action,Touch,"V.S.M",Instant,TRUE,,TRUE,TRUE,,,,,,,
 Guardian of Faith,4,Conjuration,,1 action,30 feet,V,8 Hours,,,TRUE,,,,,,,,
 Guards and Wards,6,Abjuration,,10 minutes,Touch,V.S.M,24 Hours,TRUE,,,,,,,,,,TRUE
 Guidance,0,Divination,,1 action,Touch,"V,S","Conc, 1 minute",,,TRUE,TRUE,,,,,,,
 Guiding Bolt,1,Evocation,,1 action,120 feet,"V,S",1 round,,,TRUE,,,,,,,,
 Gust of Wind,2,Evocation,,1 action,Self (60ft line),V.S.M,Conc. 1 minute,,,,TRUE,,,,,TRUE,,TRUE
 Hail of Thorns,1,Conjuration,,1 Bonus action,Self,V,"Conc, 1 minute",,,,,,,,TRUE,,,
-Hallow,5,Evocation,,24 Hours,Touch,"V,S,M",Until Dispelled,,,TRUE,,,,,,,,
+Hallow,5,Evocation,,24 Hours,Touch,"V.S.M",Until Dispelled,,,TRUE,,,,,,,,
 Hallucinatory Terran,4,Illusion,,10 minutes,300 feet,V.S.M,24 Hours,TRUE,,,TRUE,,,,,,TRUE,TRUE
 Harm,6,Necromancy,,1 action,60 feet,"V,S",Instant,TRUE,,TRUE,,,,,,,,
 Haste,3,Transmutation,,1 action,30 feet,V.S.M,Conc. 1 minute,,,,,,,,,TRUE,,TRUE
 Heal,6,Evocation,,1 action,60 feet,"V,S",Instant,,,TRUE,TRUE,,,,,,,
 Healing Word,1,Evocation,,1 Bonus action,60 feet,V,Instant,TRUE,,TRUE,TRUE,,,,,,,
-Heat Metal,2,Transmutation,,1 action,60 feet,"V,S,M","Conc, 1 minute",TRUE,,,TRUE,,,,,,,
+Heat Metal,2,Transmutation,,1 action,60 feet,"V.S.M","Conc, 1 minute",TRUE,,,TRUE,,,,,,,
 Hellish Rebuke,1,Evocation,,1 reaction,60 feet,"V,S",Instant,,,,,,,,,,TRUE,
-Heroes' Feast,6,Conjuration,,10 minutes,30 feet,"V,S,M",Instant,,,TRUE,TRUE,,,,,,,
+Heroes' Feast,6,Conjuration,,10 minutes,30 feet,"V.S.M",Instant,,,TRUE,TRUE,,,,,,,
 Heroism,1,Enchantment,,1 action,Touch,"V,S","Conc, 1 minute",TRUE,,,,,,TRUE,,,,
-Hex,1,Enchantment,,1 Bonus action,90 feet,"V,S,M","Conc, 1 Hour",,,,,,,,,,TRUE,
+Hex,1,Enchantment,,1 Bonus action,90 feet,"V.S.M","Conc, 1 Hour",,,,,,,,,,TRUE,
 Hold Monster,5,Enchantment,,1 action,90 feet,V.S.M,Conc. 1 minute,TRUE,,,,,,,,TRUE,TRUE,TRUE
 Hold Person,2,Enchantment,,1 action,60 feet,V.S.M,Conc. 1 minute,TRUE,,TRUE,TRUE,,,,,TRUE,TRUE,TRUE
-Holy Aura,8,Abjuration,,1 action,Self,"V,S,M","Conc, 1 minute",,,TRUE,,,,,,,,
-Hunger of Hadar,3,conjuration,,1 action,150 feet,"V,S,M","Conc, 1 minute",,,,,,,,,,TRUE,
+Holy Aura,8,Abjuration,,1 action,Self,"V.S.M","Conc, 1 minute",,,TRUE,,,,,,,,
+Hunger of Hadar,3,conjuration,,1 action,150 feet,"V.S.M","Conc, 1 minute",,,,,,,,,,TRUE,
 Hunter's Mark,1,Divination,,1 Bonus action,90 feet,V,"Conc, 1 Hour",,,,,,,,TRUE,,,
 Hypnotic Pattern,3,Illusion,,1 action,120 feet,S.M,Conc. 1 minute,TRUE,,,,,,,,TRUE,TRUE,TRUE
 Ice Storm,4,Evocation,,1 action,300 feet,V.S.M,Instant,,,,TRUE,,,,,TRUE,,TRUE
@@ -192,7 +192,7 @@ Illusory Script,1,Illusion,TRUE,1 minute,Touch,S.M,10 Days,TRUE,,,,,,,,,TRUE,TRU
 Imprisonment,9,Abjuration,,1 minute,30 feet,V.S.M,Until Dispelled,TRUE,,,,,,,,,TRUE,TRUE
 Incendiary Cloud,8,Conjuration,,1 action,150 feet,V.S,Conc. 1 minute,,,,,,,,,TRUE,,TRUE
 Inflict Wounds,1,Necromancy,,1 action,Touch,"V,S",Instant,,,TRUE,,,,,,,,
-Insect Plague,5,Conjuration,,1 action,300 feet,"V,S,M","Conc, 10 minutes",,,TRUE,TRUE,,,,,TRUE,,
+Insect Plague,5,Conjuration,,1 action,300 feet,"V.S.M","Conc, 10 minutes",,,TRUE,TRUE,,,,,TRUE,,
 Invisibility,2,Illusion,,1 action,Touch,V.S.M,Conc. 1 Hour,TRUE,,,,,,,,TRUE,,TRUE
 Jump,1,Transmutation,,1 action,Touch,V.S.M,1 minute,,,,TRUE,,,,TRUE,TRUE,,TRUE
 Knock,2,Transmutation,,1 action,60 feet,V,Instant,TRUE,,,,,,,,TRUE,,TRUE
@@ -204,7 +204,7 @@ Levitate,2,Transmutation,,1 action,60 feet,V.S.M,Conc. 10 minutes,,,,,,,,,TRUE,,
 Light,0,Evocation,,1 action,Touch,V.M,1 Hour,,,TRUE,,,,,,TRUE,,TRUE
 Lightning Arrow,3,Transmutation,,1 Bonus action,Self,"V,S","Conc, 1 minute",,,,,,,,TRUE,,,
 Lightning Bolt,3,Evocation,,1 action,Self (100ft line),V.S.M,Instant,,,,,,,,,TRUE,,TRUE
-Locate Animals or Plants,2,Divination,TRUE,1 action,Self,"V,S,M",Instant,TRUE,,,TRUE,,,,TRUE,,,
+Locate Animals or Plants,2,Divination,TRUE,1 action,Self,"V.S.M",Instant,TRUE,,,TRUE,,,,TRUE,,,
 Locate Creature,4,Divination,,1 action,Self,V.S.M,Conc. 1 Hour,TRUE,,TRUE,TRUE,,,TRUE,TRUE,,,TRUE
 Locate Object,2,Divination,,1 action,Self,V.S.M,Conc. 10 minutes,TRUE,,TRUE,TRUE,,,TRUE,TRUE,,,TRUE
 Longstrider,1,Transmutation,,1 action,Touch,V.S.M,1 Hour,TRUE,,,TRUE,,,,TRUE,,,TRUE
@@ -233,7 +233,7 @@ Mirror Image,2,Illusion,,1 action,Self,V.S,1 minute,TRUE,,,,,,,,TRUE,TRUE,TRUE
 Mislead,5,Illusion,,1 action,Self,S,Conc. 1 Hour,TRUE,,,,,,,,,,TRUE
 Misty Step,2,Conjuration,,1 Bonus action,Self,V,Instant,,,,,,,,,TRUE,TRUE,TRUE
 Modify Memory,5,Enchantment,,1 action,30 feet,V.S,Conc. 1 minute,TRUE,,,,,,,,,,TRUE
-Moonbeam,2,Evocation,,1 action,120 feet,"V,S,M","Conc, 1 minute",,,,TRUE,,,,,,,
+Moonbeam,2,Evocation,,1 action,120 feet,"V.S.M","Conc, 1 minute",,,,TRUE,,,,,,,
 Mordenkaines's Faithful Hound,4,Conjuration,,1 action,30 feet,V.S.M,8 Hours,,,,,,,,,,,TRUE
 Mordenkaines's Magnificent Mansion,7,Conjuration,,1 minute,300 feet,V.S.M,24 Hours,TRUE,,,,,,,,,,TRUE
 Mordenkaines's Private Sanctum,4,Abjuration,,10 minutes,120 feet,V.S.M,24 Hours,,,,,,,,,,,TRUE
@@ -242,9 +242,9 @@ Move Earth,6,Transmutation,,1 action,120 feet,V.S.M,Conc. 2 Hours,,,,TRUE,,,,,TR
 Nondetection,3,Abjuration,,1 action,Touch,V.S.M,8 Hours,TRUE,,,,,,,TRUE,,,TRUE
 Nystul's Magic Aura,2,Illusion,,1 action,Touch,V.S.M,24 Hours,,,,,,,,,,,TRUE
 Otiluke's Freezing Sphere,6,Evocation,,1 action,300 feet,V.S.M,Instant,,,,,,,,,,,TRUE
-Otiluke's Resilient Sphere,4,Evocation,,1 action,30 feet,"V,S,M","Conc, 1 minute",,,,,,,,,,,
+Otiluke's Resilient Sphere,4,Evocation,,1 action,30 feet,"V.S.M","Conc, 1 minute",,,,,,,,,,,
 Otto's Irresistible Dance,6,Enchantment,,1 action,30 feet,V,Conc. 1 minute,TRUE,,,,,,,,,,TRUE
-Pass Without Trace,2,Abjuration,,1 action,Self,"V,S,M","Conc, 1 Hour",,,,TRUE,,,,TRUE,,,
+Pass Without Trace,2,Abjuration,,1 action,Self,"V.S.M","Conc, 1 Hour",,,,TRUE,,,,TRUE,,,
 Passwall,5,Transmutation,,1 action,30 feet,V.S.M,1 Hour,,,,,,,,,,,TRUE
 Phatnasmal Force,2,Illusion,,1 action,60 feet,V.S.M,Conc. 1 minute,TRUE,,,,,,,,TRUE,,TRUE
 Phatamal Killer,4,Illusion,,1 action,120 feet,V.S,Conc. 1 minute,,,,,,,,,,,TRUE
@@ -269,21 +269,21 @@ Protection From Energy,3,Abjuration,,1 action,Touch,V.S,Conc. 1 Hour,,,TRUE,TRUE
 Protection From Evil and Good,1,Abjuration,,1 action,Touch,V.S.M,Conc. 10 minutes,,,TRUE,,,,TRUE,,,TRUE,TRUE
 Protection From Poison,2,Abjuration,,1 action,Touch,"V,S",1 Hour,,,TRUE,TRUE,,,TRUE,TRUE,,,
 Purify Food and Drink,1,Transmutation,TRUE,1 action,10 feet,"V,S",Instant,,,TRUE,TRUE,,,TRUE,,,,
-Raise Dead,5,Necromancy,,1 Hour,Touch,"V,S,M",Instant,TRUE,,TRUE,,,,TRUE,,,,
+Raise Dead,5,Necromancy,,1 Hour,Touch,"V.S.M",Instant,TRUE,,TRUE,,,,TRUE,,,,
 Rary's Telepathic Bond,5,Divination,TRUE,1 action,30 feet,V.S.M,1 Hour,,,,,,,,,,,TRUE
 Ray of Enfeblement,2,Necromancy,,1 action,60 feet,V.S,Conc. 1 minute,,,,,,,,,,TRUE,TRUE
 Ray of Frost,0,Evocation,,1 action,60 feet,V.S,Instant,,,,,,,,,TRUE,,TRUE
 Ray of Sickness,1,Necromancy,,1 action,60 feet,V.S,Instant,,,,,,,,,TRUE,,TRUE
-Regenerate,7,Transmutation,,1 minute,Touch,"V,S,M",1 Hour,TRUE,,TRUE,TRUE,,,,,,,
-Reincarnate,5,Transmutation,,1 Hour,Touch,"V,S,M",Instant,,,,TRUE,,,,,,,
+Regenerate,7,Transmutation,,1 minute,Touch,"V.S.M",1 Hour,TRUE,,TRUE,TRUE,,,,,,,
+Reincarnate,5,Transmutation,,1 Hour,Touch,"V.S.M",Instant,,,,TRUE,,,,,,,
 Remove Curse,3,Abjuration,,1 action,Touch,V.S,Instant,,,TRUE,,,,TRUE,,,TRUE,TRUE
-Resistance,0,Abjuration,,1 action,Touch,"V,S,M","Conc, 1 minute",,,TRUE,TRUE,,,,,,,
-Resurrection,7,Necromancy,,1 Hour,Touch,"V,S,M",Instant,TRUE,,TRUE,,,,,,,,
+Resistance,0,Abjuration,,1 action,Touch,"V.S.M","Conc, 1 minute",,,TRUE,TRUE,,,,,,,
+Resurrection,7,Necromancy,,1 Hour,Touch,"V.S.M",Instant,TRUE,,TRUE,,,,,,,,
 Reverse Gravity,7,Transmutation,,1 action,100 feet,V.S.M,Conc. 1 minute,,,,TRUE,,,,,TRUE,,TRUE
-Revivify,3,Conjuration,,1 action,Touch,"V,S,M",Instant,,,TRUE,,,,TRUE,,,,
+Revivify,3,Conjuration,,1 action,Touch,"V.S.M",Instant,,,TRUE,,,,TRUE,,,,
 Rope Trick,2,Transmutation,,1 action,Touch,V.S.M,1 Hour,,,,,,,,,,,TRUE
 Sacred Flame,0,Evocation,,1 action,60 feet,"V,S",Instant,,,TRUE,,,,,,,,
-Sanctuary,1,Abjuration,,1 action,60 feet,"V,S,M",1 minute,,,TRUE,,,,,,,,
+Sanctuary,1,Abjuration,,1 action,60 feet,"V.S.M",1 minute,,,TRUE,,,,,,,,
 Scorching Ray,2,Evocation,,1 action,120 feet,V.S,Instant,,,,,,,,,TRUE,,TRUE
 Scrying,5,Divination,,10 minutes,Self,V.S.M,Conc. 10 minutes,TRUE,,TRUE,TRUE,,,,,,TRUE,TRUE
 Searing Smite,1,Evocation,,1 Bonus action,Self,V,"Conc, 1 minute",,,,,,,TRUE,,,,
@@ -294,8 +294,8 @@ Sequester,7,Transmutation,,1 action,Touch,V.S.M,Until dispelled,,,,,,,,,,,TRUE
 Shapechange,9,Transmutation,,1 action,Self,V.S.M,Conc. 1 Hour,,,,TRUE,,,,,,,TRUE
 Shatter,2,Evocation,,1 action,60 feet,V.S.M,Instant,TRUE,,,,,,,,TRUE,TRUE,TRUE
 Shield,1,Abjuration,,1 Reaction,Self,V.S,1 Round,,,,,,,,,TRUE,,TRUE
-Shield of Faith,1,Abjuration,,1 Bonus action,60 feet,"V,S,M","Conc, 10 minutes",,,TRUE,,,,TRUE,,,,
-Shillelagh,0,Transmutation,,1 Bonus action,Touch,"V,S,M",1 minute,,,,TRUE,,,,,,,
+Shield of Faith,1,Abjuration,,1 Bonus action,60 feet,"V.S.M","Conc, 10 minutes",,,TRUE,,,,TRUE,,,,
+Shillelagh,0,Transmutation,,1 Bonus action,Touch,"V.S.M",1 minute,,,,TRUE,,,,,,,
 Shocking Grasp,0,Evocation,,1 action,Touch,V.S,Instant,,,,,,,,,TRUE,,TRUE
 Silence,2,Illusion,TRUE,1 action,120 feet,"V,S","Conc, 10 minutes",TRUE,,TRUE,,,,,TRUE,,,
 Silent Image,1,Illusion,,1 action,60 feet,V.S.M,Conc. 10 minutes,TRUE,,,,,,,,TRUE,,TRUE
@@ -305,11 +305,11 @@ Sleet Storm,3,Conjuration,,1 action,150 feet,V.S.M,Conc. 1 minute,,,,TRUE,,,,,TR
 Slow,3,Transmutation,,1 action,120 feet,V.S.M,Conc. 1 minute,,,,,,,,,TRUE,,TRUE
 Spare the Dying,0,Necromancy,,1 action,Touch,"V,S",Instat,TRUE,,TRUE,,,,,,,,
 Speak With Animals,1,Divination,TRUE,1 action,Self,"V,S",10 minutes,TRUE,TRUE,,TRUE,,,,TRUE,,,
-Speak With Dead,3,Necromancy,,1 action,10 feet,"V,S,M",10 minutes,TRUE,,TRUE,,,,,,,,
+Speak With Dead,3,Necromancy,,1 action,10 feet,"V.S.M",10 minutes,TRUE,,TRUE,,,,,,,,
 Speak With Plants,3,Transmutation,,1 action,Self(30ft radius),"V,S",10 minutes,TRUE,,,TRUE,,,,TRUE,,,
 Spider Climb,2,Transmutation,,1 action,Touch,V.S.M,Conc. 1 Hour,,,,,,,,,TRUE,TRUE,TRUE
-Spike Growth,2,Transmutation,,1 action,150 feet,"V,S,M","Conc, 10 minutes",,,,TRUE,,,,TRUE,,,
-Spirit Guardians,3,Conjuration,,1 action,Self(15ft radius),"V,S,M","Conc, 10 minutes",,,TRUE,,,,,,,,
+Spike Growth,2,Transmutation,,1 action,150 feet,"V.S.M","Conc, 10 minutes",,,,TRUE,,,,TRUE,,,
+Spirit Guardians,3,Conjuration,,1 action,Self(15ft radius),"V.S.M","Conc, 10 minutes",,,TRUE,,,,,,,,
 Spiritual Weapon,2,Evocation,,1 Bonus action,60 feet,"V,S",1 minute,,,TRUE,,,,,,,,
 Staggering Smite,4,Evocation,,1 Bonus action,Self,V,"Conc, 1 minute",,,,,,,TRUE,,,,
 Stinking Cloud,3,Conjuration,,1 action,90 feet,V.S.M,Conc. 1 minute,TRUE,,,,,,,,TRUE,,TRUE
@@ -319,7 +319,7 @@ Storm of Vengeance,9,Conjuration,,1 action,Sight,"V,S","Conc, 1 minute",,,,TRUE,
 Suggestion,2,Enchantment,,1 action,30 feet,V.M,Conc. 8 Hours,TRUE,,,,,,,,TRUE,TRUE,TRUE
 Sunbeam,6,Evocation,,1 action,Self(60ft line),V.S.M,Conc. 1 minute,,,,TRUE,,,,,TRUE,,TRUE
 Sunburst,8,Evocation,,1 action,150 feet,V.S.M,Instant,,,,TRUE,,,,,TRUE,,TRUE
-Swift Quiver,5,Transmutation,,1 Bonus action,Touch,"V,S,M","Conc, 1 minute",,,,,,,,TRUE,,,
+Swift Quiver,5,Transmutation,,1 Bonus action,Touch,"V.S.M","Conc, 1 minute",,,,,,,,TRUE,,,
 Symbol,7,Abjuration,,1 minute,Touch,V.S.M,Until dispelled or triggered,TRUE,,TRUE,,,,,,,,TRUE
 Tasha's Hideous Laughter,1,Enchantment,,1 action,30 feet,V.S.M,Conc. 1 minute,TRUE,,,,,,,,,,TRUE
 Telekinesis,5,Transmutation,,1 action,60 feet,V.S,Conc. 10 minutes,,,,,,,,,TRUE,,TRUE
@@ -328,7 +328,7 @@ Teleport,7,Conjuration,,1 action,10 feet,V,Instant,TRUE,,,,,,,,TRUE,,TRUE
 Teleportation Circle,5,Conjuration,,1 minute,10 feet,V.M,1 Round,TRUE,,,,,,,,TRUE,,TRUE
 Tenser's Floating Disk,1,Conjuration,TRUE,1 acton,30 feet,V.S.M,1 Hour,,,,,,,,,,,TRUE
 Thaumaturgy,0,Transmutation,,1 action,30 feet,V,1 minute,,,TRUE,,,,,,,,
-Thorn Whip,0,Transmutation,,1 action,30 feet,"V,S,M",Instant,,,,TRUE,,,,,,,
+Thorn Whip,0,Transmutation,,1 action,30 feet,"V.S.M",Instant,,,,TRUE,,,,,,,
 Thunderous Smite,1,Evocation,,1 Bonus action,Self,V,"Conc, 1 minute",,,,,,,TRUE,,,,
 Thunderwave,1,Evocation,,1 action,Self(15ft cube),V.S,Instant,TRUE,,,TRUE,,,,,TRUE,,TRUE
 Time Stop,9,Transmutation,,1 action,Self,V,Instant,TRUE,,,,,,,,TRUE,,TRUE
@@ -336,7 +336,7 @@ Tongues,3,Divination,,1 action,Touch,V.M,1 Hour,TRUE,,TRUE,,,,,,TRUE,TRUE,TRUE
 Transport Via Plants,6,Conjuration,,1 action,10 feet,"V,S",1 Round,,,,TRUE,,,,,,,
 Tree Stride,5,Conjuration,,1 action,Self,"V,S","Conc, 1 minute",,,,TRUE,,,,TRUE,,,
 True Polyorph,9,Transmutation,,1 action,30 feet,V.S.M,Conc. 1 Hour,TRUE,,,,,,,,,TRUE,TRUE
-True Resurrection,9,Necromancy,,1 Hour,Touch,"V,S,M",Instant,,,TRUE,TRUE,,,,,,,
+True Resurrection,9,Necromancy,,1 Hour,Touch,"V.S.M",Instant,,,TRUE,TRUE,,,,,,,
 True Seeing,6,Divination,,1 action,Touch,V.S.M,1 Hour,TRUE,,TRUE,,,,,,TRUE,TRUE,TRUE
 True Strike,0,Divination,,1 action,30 feet,S,Conc. 1 Round,,,,,,,,,TRUE,TRUE,TRUE
 Tsunami,8,Conjuration,,1 minute,Sight,"V,S","Conc, 6 Rounds",,,,TRUE,,,,,,,
@@ -347,14 +347,14 @@ Wall of Fire,4,Evocation,,1 action,120 feet,V.S.M,Conc. 1 minute,TRUE,,,TRUE,,,,
 Wall of Force,5,Evocation,,1 action,120 feet,V.S.M,Conc. 10 minutes,,,,,,,,,,,TRUE
 Wall of Ice,6,Evocation,,1 action,120 feet,V.S.M,Conc. 10 minutes,,,,,,,,,,,TRUE
 Wall of Stone,5,Evocation,,1 action,120 feet,V.S.M,Conc. 10 minutes,,,,TRUE,,,,,TRUE,,TRUE
-Wall of Thorns,6,Conjuration,,1 action,120 feet,"V,S,M","Conc, 10 minutes",TRUE,,,TRUE,,,,,,,
-Warding Bond,2,Abjuration,,1 action,Touch,"V,S,M",1 Hour,,,TRUE,,,,,,,,
+Wall of Thorns,6,Conjuration,,1 action,120 feet,"V.S.M","Conc, 10 minutes",TRUE,,,TRUE,,,,,,,
+Warding Bond,2,Abjuration,,1 action,Touch,"V.S.M",1 Hour,,,TRUE,,,,,,,,
 Water Breathing,3,Transmutation,TRUE,1 action,30 feet,V.S.M,24 Hours,,,,TRUE,,,,TRUE,TRUE,,TRUE
-Water Walk,3,Transmutation,TRUE,1 action,30 feet,"V,S,M",1 Hour,,,TRUE,TRUE,,,,TRUE,TRUE,,
+Water Walk,3,Transmutation,TRUE,1 action,30 feet,"V.S.M",1 Hour,,,TRUE,TRUE,,,,TRUE,TRUE,,
 Web,2,Conjuration,,1 action,60 feet,V.S.M,Conc. 1 Hour,,,,,,,,,TRUE,,TRUE
 Weird,9,Illusion,,1 action,120 feet,V.S,Conc. 1 minute,,,,,,,,,,,TRUE
-Wind Walk,6,Transmuation,,1 minute,30 feet,"V,S,M",8 Hours,,,,TRUE,,,,,,,
-Wind Wall,3,Evocation,,1 action,120 feet,"V,S,M","Conc, 1 minute",,,,TRUE,,,,TRUE,,,
+Wind Walk,6,Transmuation,,1 minute,30 feet,"V.S.M",8 Hours,,,,TRUE,,,,,,,
+Wind Wall,3,Evocation,,1 action,120 feet,"V.S.M","Conc, 1 minute",,,,TRUE,,,,TRUE,,,
 Wish,9,Conjuration,,1 action,Self,V,Instant,,,,,,,,,TRUE,,TRUE
 Witch Bolt,1,Evocation,,1 action,30 feet,V.S.M,Conc. 1 minute,,,,,,,,,TRUE,TRUE,TRUE
 Word of Recall,6,Conjuration,,1 action,5 feet,V,Instant,,,TRUE,,,,,,,,

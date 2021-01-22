@@ -51,12 +51,12 @@ class table_reader:
             data = input(f"Spell {convert[0]}: ")
             values.append(data)
         convert = tuple(values)
-        self.cursor.execute(f"SELECT columns FROM {self.database}")
+        #self.cursor.execute(f"SELECT {} FROM {self.database}")
         q_marks = "?"
         how_many_columns = len(values)
         for i in range(how_many_columns - 1): #makes sure that the tuple of ?'s the exact measure as the input list 
             q_marks += ",?"
-        self.cursor.execute(f"INSERT INTO {self.database} VALUES  WHERE values = ({q_marks})", convert)
+        self.cursor.execute(f"INSERT INTO {self.database} VALUES {convert};") #({tuple(row)})
         self.connection.commit()
 
     # update
@@ -64,6 +64,8 @@ class table_reader:
         """Displays all the types of different data collumns there are and let the user pick.
         Then will ask the user what they want to replace."""
 
+        search = input("Which spell are you updateing (Name):") #Get the name of the spell that you are looking to update
+        
         self.cursor.execute(f"SELECT * FROM {self.database};")
         row = list(self.cursor.description) #Will look at the tables and get info from reach column 
         for column in row: 
@@ -74,7 +76,7 @@ class table_reader:
 
         #TODO: figure out how to only update one row, because this looks like this updates the tabel
         #may have to do with the variables I am using.
-        self.cursor.execute(f"UPDATE {self.database} SET {variable} WHERE value = (?)", value)
+        self.cursor.execute(f"""UPDATE {self.database} SET {variable} = '{value}' WHERE Name = '{search}';""")
         self.connection.commit()
 
     # delete
@@ -82,8 +84,8 @@ class table_reader:
         """ delete one row from the table in the database """
 
         name = input("Spell Name: ")
-        values = (name,)
-        self.cursor.execute(f"DELETE FROM {self.database} WHERE name = ?", values)
+        value = (name,)
+        self.cursor.execute(f"DELETE FROM {self.database} WHERE Name = (?)", value)
         self.connection.commit()
         
     """ Stretch Challenges"""  
@@ -91,7 +93,12 @@ class table_reader:
     def search(self):
         """ Allows the user to sort through the file data by what is expected 
         in the column they are looking at."""
-
+        
+        self.cursor.execute(f"SELECT * FROM {self.database};")
+        row = list(self.cursor.description) #Will look at the tables and get info from reach column 
+        for column in row: 
+            convert = list(column)
+            print(convert[0])
         data_search = input("What are you searching in a spell: ")
         variable = (input("What data are you expecting it to have: "))
         self.cursor.execute(f"SELECT * FROM {self.database} WHERE {data_search} = {variable};")
@@ -101,17 +108,23 @@ class table_reader:
 
     """ inner join """
     def inner_join(self):
+        ''' inner join is to find the simularities of two tables and puts it into one table so you can then see
+        all the items in the different tables.'''
+
         new_database = input("What do you want to call you new database file? ")
         file_source = input("What is the csv file that you are extracting the data from?")
         table_2 = table_reader(new_database, file_source)
-        self.cursor.execute(f"SELECT * FROM {self.database} ORDER BY Name DESC LIMIT 1;")
-        last_entry = list(self.cursor.fetchone())
         
-        #TODO: join the second table with the first one so you can view them.
-        self.cursor.execute(f"SELECT * FROM {self.database} INNER JOIN {table_2.database} ON {self.database}.Name = {table_2.database}.Name WHERE Name = {last_entry[0]};")
-    # merge self table and new table
-    # return: combined table
-
+        self.cursor.execute(f"SELECT * FROM {self.database} ORDER BY Name DESC LIMIT 1;") # This will get the last line of the sqlite database
+        last_entry = list(self.cursor.fetchone()) #turn it into a list and save it here.
+        
+        self.cursor.execute(f"""SELECT * FROM {self.database} INNER JOIN {table_2.database} ON {self.database}.Name = {table_2.database}.Name 
+        WHERE {self.database}.Name = '{last_entry[0]}';""")
+        if len(list(self.cursor.fetchall())) > 0:
+            for line in self.cursor.fetchall(): print(line)
+        else:
+            print("There are no simular spells between the two files.")
+    
     """ USER INTERFACE METHODS """
     def UI(self):
         """
@@ -126,8 +139,9 @@ class table_reader:
             print("3) Update ")
             print("4) Delete ")
             print("5) Search")
-            print("6) Merge in another table.")
-            print("7) Quit")
+            print("6) Find duplicate spells")
+            print("7) Merge in another table")
+            print("8) Quit")
             choice = input("> ")
 
             #1 = Display
@@ -142,10 +156,24 @@ class table_reader:
             elif choice == "5": self.search()
             #6 = inner join
             elif choice == "6": self.inner_join() 
-            #7 =Quit
+            #7 = merge
+            elif choice == "7": self.merge_tables()
+            #8 =Quit
             else: break
     
     """ EXTRA STUFF: things for later use"""
+    def merge_tables(self):
+        new_database = input("What do you want to call you new database file? ")
+        file_source = input("What is the csv file that you are extracting the data from?")
+        table_2 = table_reader(new_database, file_source)
+        self.cursor.execute(f"SELECT * FROM {self.database} UNION SELECT * FROM {table_2.database}") #already merges the database alphabetically
+        
+        choice = input("Would you like to see the merged table [Y/N]: ").upper()
+        if choice == "Y":
+            for line in self.cursor.fetchall(): print(line)
+        else: print("Okay")
+    
+    
     def table_init(self):
         """  """
         table_headers = "name" # TODO: construct table_header in ui methods below

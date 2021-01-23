@@ -76,7 +76,7 @@ class table_reader:
 
         #TODO: figure out how to only update one row, because this looks like this updates the tabel
         #may have to do with the variables I am using.
-        self.cursor.execute(f"""UPDATE {self.database} SET {variable} = '{value}' WHERE Name = '{search}';""")
+        self.cursor.execute(f"""UPDATE {self.database} SET {variable} = '{value}' WHERE Name = "{search}";""")
         self.connection.commit()
 
     # delete

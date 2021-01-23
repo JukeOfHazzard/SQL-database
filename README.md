@@ -3,27 +3,33 @@ Writing code to work with SQL databases
 insert, modify, delete, and retrieve (or query) data
 # Overview
 
-{Important!  Do not say in this section that this is college assignment.  Talk about what you are trying to accomplish as a software engineer to further your learning.}
+This was my attempt to learn how to use the different functionalities of the SQLite commands and executes to
+get the most out of the data and understand some of the concepts between the more complicated commands.
 
-{Provide a description the software that you wrote and how it integrates with a SQL Relational Database. Describe how to use your program.}
+This program puts the information of the Sql Commands into a python class. And all the user has to do is
+tell the class to access the functions that uses those commands.
 
-{Describe your purpose for writing this software.}
+The purpose of this software is compare and look at multiple sources of spells from DND and see what they have
+available for the players. This could be later used for data analysis or for checking for plagerism of spells.
 
 {Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running, a walkthrough of the code, and a view of how created the Relational Database.}
 
-[Software Demo Video](http://youtube.link.goes.here)
+[The Spell Readers](https://youtu.be/ryQjSnUgYeU)
 
 # Relational Database
 
-{Describe the relational database you are using.}
+I am using just a regular database file in order to use the SQLite queries on.
 
-{Describe the structure (tables) of the relational database that you created.}
+The tables are just a singluar table full of many rows and columns. There are a lot of data in the table
+so going through it is a bit of a hassle for my first time learning how to work with databases.
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
-
-{Describe the programming language that you used and any libraries.}
+* Visual Studio Code
+* Python 3.8 32-bit
+* Git / GitHub 
+* Pandas (an imported library)
+* SQLite library, used to actually worke with the database
 
 # Useful Websites
 * [sqlite tutorial](https://www.youtube.com/watch?v=xbBFHiTFLRc))
@@ -36,6 +42,6 @@ insert, modify, delete, and retrieve (or query) data
 # Future Work
 
 {Make a list of things that you need to fix, improve, and add in the future.}
-* Item 1
-* Item 2
-* Item 3
+* Finish the Add collumn function.
+* Be able to make and take tables from the internet to work with.
+* Have the main fuction do more things than just run the program.
